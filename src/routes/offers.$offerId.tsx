@@ -45,7 +45,7 @@ function OfferDetail() {
             <div className="flex flex-wrap items-center gap-2">
               <Badge className="rounded-full bg-accent text-accent-foreground hover:bg-accent">−{discount}%</Badge>
               <Badge variant="outline" className="rounded-full">{offer.category}</Badge>
-              {offer.tags.map((t) => <Badge key={t} variant="secondary" className="rounded-full">{t}</Badge>)}
+              {offer.tags.map((t: string) => <Badge key={t} variant="secondary" className="rounded-full">{t}</Badge>)}
             </div>
             <h1 className="mt-3 font-display text-4xl font-bold md:text-5xl">{offer.title}</h1>
             {restaurant && (
